@@ -41,21 +41,23 @@
                             <li><a href="#!"> <p id="bold"></i> Connections</p>
                                 <br>
                             </a></li>
-                            <li>
-                            <div id="modal1" class="modal">
-                                <div class="modal-content">
-                                  <h4></h4>
-                                  <div class="divider"></div>
-                                  <h5 id="userMatch"></h5>
-                                  <img id="userMatchImage" class="materialboxed" width="650" src="">
-                                </div>
-                                <div class="modal-footer">
-                                  <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
-                                </div>
-                              </div>
-                          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons"></i></a>
-                        </li>
-                      
+                            
+                            <!-- <li> -->
+                              <div class="container">
+                                <div id="modal1" class="modal">
+                                    <div class="modal-content">
+                                      <h4></h4>
+                                      <div class="divider"></div>
+                                      <h5 id="userMatch"></h5>
+                                      <img id="userMatchImage" class="materialboxed" width="650" src="">
+                                    </div>
+                                    <div class="modal-footer">
+                                      <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Try Again!</a>
+                                    </div>
+                                  </div>
+                              <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons"></i></a>
+                            </div>
+                          
            </div>
                   <div class="col s8">
                     <!-- <main class="container"> -->
@@ -69,8 +71,8 @@
                                   <label for="first_name">Your Name</label>
                                 </div>
                                 <div class="input-field col s6">
-                                  <input placeholder="" id="last_name" type="text" class="validate">
-                                  <label for="last_name">Link to your Photo</label>
+                                  <input placeholder="" id="userPhoto" type="text" class="validate">
+                                  <label for="userPhoto">Link to your Photo</label>
                                 </div>
                               </div>
                        
@@ -171,6 +173,21 @@
                               <i class="material-icons right"></i>
                             </button>
                 
+
+
+                          <!-- MODAL ESTUPIDO QUE NO FUNCIONA -->
+                          <!-- <div id="modal1" class="modal">
+                              <div class="modal-content">
+                                <h4></h4>
+                                <div class="divider"></div>
+                                <h5 id="userMatch"></h5>
+                                <img id="userMatchImage" class="materialboxed" width="650" src="">
+                              </div>
+                              <div class="modal-footer">
+                                <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
+                              </div>
+                            </div>
+                        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons"></i></a> -->
                   </div>
 
                 </div>
@@ -196,7 +213,7 @@ $(document).ready(function(){
 			event.preventDefault();
 			var userInput = {
 				name: $('#name').val().trim(),
-				// photo: $('#userPhoto').val().trim(),
+				photo: $('#userPhoto').val().trim(),
 				scores:[
           
 					$('#p1').val().trim(),
