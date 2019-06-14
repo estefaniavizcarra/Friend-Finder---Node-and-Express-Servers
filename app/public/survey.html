@@ -41,9 +41,10 @@
                             <li><a href="#!"> <p id="bold"></i> Connections</p>
                                 <br>
                             </a></li>
+                            <li>
                             <div id="modal1" class="modal">
                                 <div class="modal-content">
-                                  <h4>Closest Friend Match</h4>
+                                  <h4></h4>
                                   <div class="divider"></div>
                                   <h5 id="userMatch"></h5>
                                   <img id="userMatchImage" class="materialboxed" width="650" src="">
@@ -52,8 +53,8 @@
                                   <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
                                 </div>
                               </div>
-                          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                                
+                          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons"></i></a>
+                        </li>
                       
            </div>
                   <div class="col s8">
@@ -64,19 +65,15 @@
                             <form class="col s12 formulario">
                               <div class="row">
                                 <div class="input-field col s6">
-                                  <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                  <input placeholder="" id="name" type="text" class="validate">
                                   <label for="first_name">Your Name</label>
                                 </div>
                                 <div class="input-field col s6">
-                                  <input id="last_name" type="text" class="validate">
-                                  <label for="last_name">Education</label>
+                                  <input placeholder="" id="last_name" type="text" class="validate">
+                                  <label for="last_name">Link to your Photo</label>
                                 </div>
                               </div>
-                              <div class="row">
-                                  <div class="input-field col s6">
-                                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                                    <label for="first_name">City</label>
-                                  </div>
+                       
       
                             </form>
                           </div>
@@ -170,7 +167,7 @@
                           <label> Which instrument do you prefer to listen to?</label>
                           </div>
         
-                          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                          <button class="btn waves-effect waves-light" type="submit" id="submit" name="action">Submit
                               <i class="material-icons right"></i>
                             </button>
                 
@@ -183,24 +180,25 @@
                   <script>
 $(document).ready(function(){
     $('select').formSelect();
-		// $('select').material_select();
-			// $('.modal').modal({
-		// 		dismissible: false, // Modal can be dismissed by clicking outside of the modal
-		// 		opacity: .5, // Opacity of modal background
-		// 		inDuration: 300, // Transition in duration
-		// 		outDuration: 200, // Transition out duration
-		// 		startingTop: '4%', // Starting top style attribute
-		// 		endingTop: '10%' // Ending top style attribute
-		// 	});
-		// });
 
-		$('#submitButton').on('click', function(event) {
+    $('.modal').modal({
+				dismissible: false, // Modal can be dismissed by clicking outside of the modal
+				opacity: .5, // Opacity of modal background
+				inDuration: 300, // Transition in duration
+				outDuration: 200, // Transition out duration
+				startingTop: '4%', // Starting top style attribute
+				endingTop: '10%' // Ending top style attribute
+			});
+		});
+	
+
+		$("#submit").on('click', function(event) {
 			event.preventDefault();
-			// Gather user inputs
 			var userInput = {
-				name: $('#userName').val().trim(),
-				photo: $('#userPhoto').val().trim(),
+				name: $('#name').val().trim(),
+				// photo: $('#userPhoto').val().trim(),
 				scores:[
+          
 					$('#p1').val().trim(),
 					$('#p2').val().trim(),
 					$('#p3').val().trim(),
@@ -208,12 +206,11 @@ $(document).ready(function(){
 					$('#p5').val().trim(),
 					$('#p6').val().trim(),
 					$('#p7').val().trim(),
-					// $('#question8').val().trim(),
-					// $('#question9').val().trim(),
-					// $('#question10').val().trim()
+	
 				]
 			};
-			// console.log('userInput = ' + JSON.stringify(userInput));
+	
+
 			// Add user inputs to friends list
 			$.post('/api/friends', userInput)
       		.done(function(data) {
@@ -223,10 +220,12 @@ $(document).ready(function(){
 		    	$("#userMatchImage").attr("src", data.matchImage);
 		    	// Pop open the modal dialog
       			$('#modal1').modal('open');
-      		});
+		});
 		});
 
-  });
+
+
+
 
   // Or with jQuery
 

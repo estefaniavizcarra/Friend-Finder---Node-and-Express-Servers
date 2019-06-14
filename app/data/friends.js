@@ -1,18 +1,18 @@
 
 var friends = 
 [{
-	"name":"KoalaBear",
-	"photo":"https://upload.wikimedia.org/wikipedia/commons/3/3c/Brisbane_Koala_Bushlands_%287114372167%29.jpg",
+	"name":"Santiago",
+	"photo":"https://image.shutterstock.com/image-photo/portrait-young-handsome-man-smiling-450w-213159280.jpg",
 	"scores":[4, 3, 3, 3, 4, 3, 2]
 }, 
 {
-	"name":"Kitty",
-	"photo":"https://i.pinimg.com/736x/ba/03/23/ba03237a6d6499f0e2633314826e1526--cutest-animals-baby-animals.jpg",
+	"name":"Conor",
+	"photo":"https://image.shutterstock.com/image-photo/charming-handsome-young-man-casual-450w-235957741.jpg",
 	"scores":[1, 2, 2, 2, 4, 4, 4]	
 },
  {
-	"name":"bunny",
-	"photo":"http://www.petakids.com/save-animals/never-buy-bunnies/",
+	"name":"Siria",
+	"photo":"https://cdn.pixabay.com/photo/2018/01/13/19/39/fashion-3080644_960_720.jpg",
 	"scores":[3, 2, 5, 2, 4, 2, 3]
 }, 
 
